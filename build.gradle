@@ -8,8 +8,7 @@ plugins {
 
 application {
     mainClass = 'com.girish.MainApp'
-    applicationDefaultJvmArgs = ['-Dlog4j.configurationFile=log4j.properties',
-    '-Dorg.quartz.jobStore.class=org.quartz.simpl.RAMJobStore']
+    applicationDefaultJvmArgs = ['-Dquartz.configurationFile=quartz.properties']
 }
 
 group 'org.example'

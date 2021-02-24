@@ -7,9 +7,9 @@ import static org.quartz.TriggerBuilder.newTrigger;
 public class MainApp {
 
     public static void main(String[] args) {
-        System.out.println(System.getProperty("log4j.configurationFile"));
-        SchedulerFactory sf = new StdSchedulerFactory();
+        System.out.println("using Quartz Properties File: " + System.getProperty("quartz.configurationFile"));
         try {
+            SchedulerFactory sf = new StdSchedulerFactory(System.getProperty("quartz.configurationFile"));
             Scheduler sched = sf.getScheduler();
             sched.start();
 
